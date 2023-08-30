@@ -12,25 +12,23 @@ if (true) {
     content = "false";
 }
 const products = [
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
+    {title: 'Cabbage', id: 1},
+    {title: 'Garlic', id: 2},
+    {title: 'Apple', id: 3},
 ];
 
-function MyButton(props) {
-    function Hello() {
-        alert("Hello!");
-    }
+function MyButton({count, onClick}) {
     return (
         <>
-            <button onClick={Hello}>{string}</button>
+            <button onClick={onClick}>{string}</button>
+            <p>{count}</p>
             <img src={user.name} alt="photo"/>
             <p>{content}</p>
             <p>{true && "what"}</p>
             <p>{true
                 ? "вот" :
                 "так"}</p>
-            {products.map((product)=> {
+            {products.map((product) => {
                 return <p key={product.id}>{product.title}</p>
             })}
         </>
